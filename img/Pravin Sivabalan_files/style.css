@@ -1,0 +1,236 @@
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.about h2, .skills h2, .education h2, .experience h2, .contact h2{
+  text-align: center;
+  font-size: 5vw;
+  color: #404040;
+}
+
+.about hr, .skills hr, .education hr, .experience hr {
+  border: 1px solid #D32F2F;
+  width:15%;
+}
+
+/* --------------------------------
+
+Navbar Settings & Header Overlay
+
+-------------------------------- */
+nav.navbar{
+  border: 0;
+  min-height: 70px;
+  background-color: #D32F2F;
+  vertical-align: middle;
+}
+
+.navbar-default .navbar-nav > li > a {
+    padding-top: 25px;
+    color: white !important;
+}
+
+#cd-intro h1 {
+  text-align: center;
+  font-size: 13vw;
+  color: #FFF;
+}
+
+/* --------------------------------
+
+Page Settings
+
+-------------------------------- */
+
+.about {
+  padding: 5%;
+}
+
+.about p {
+  font-size:2.5vw;
+}
+
+.about > img {
+  height: 50vh;
+}
+
+.about hr {
+  margin-bottom: 50px;
+}
+
+.skills {
+  padding: 5%;
+  background-color: #f2f2f2;
+}
+
+.skills .col-md-3 {
+  padding: 50px;
+  text-align: center;
+}
+
+.skills p {
+  font-size: 120%;
+}
+
+.fa {
+  color: #D32F2F;
+  font-size: 2em !important;
+}
+
+.education {
+  padding: 100px;
+}
+
+.experience {
+  padding: 100px;
+  background-color: #f2f2f2;
+}
+
+.experience h5 {
+  text-align: center;
+  padding: 50px;
+}
+
+.contact {
+  padding: 50px;
+}
+
+/* --------------------------------
+
+Zoom Out Intro Effect
+
+-------------------------------- */
+
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.cd-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #f35535;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.cd-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#cd-intro {
+  position: relative;
+  height: 300px;
+  margin-top: 50px;
+  z-index: 1;
+}
+#cd-intro #cd-intro-background {
+  height: 100%;
+  width: 100%;
+  background:
+  linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(banner-image.jpg);
+  background-size: cover;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+#cd-intro #cd-intro-tagline {
+  position: absolute;
+  width: 90%;
+  max-width: 1170px;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@media only screen and (min-width: 768px) {
+  #cd-intro {
+    height: 400px;
+    margin-top: 70px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  #cd-intro {
+    position: fixed;
+    /* do not overlap the header */
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    margin-top: 0;
+  }
+}
+
+.cd-content {
+  position: relative;
+  background-color: white;
+  z-index: 2;
+}
+
+.no-cssgradients .cd-content::before {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-content {
+    line-height: 1.8;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-content {
+    padding: 4em 0;
+    margin-top: 570px;
+  }
+}
+
+
+/* ---------------------
+
+Mobile Adjustments
+
+---------------------- */
+
+@media (max-width:425px) {
+
+  .about h2, .skills h2, .education h2, .experience h2, .contact h2{
+    font-size: 7vw;
+    padding-bottom: 1px !important;
+
+  }
+
+  .about p {
+    font-size: 5vw;
+  }
+
+  nav.navbar {
+    min-height:50px;
+  }
+
+}
