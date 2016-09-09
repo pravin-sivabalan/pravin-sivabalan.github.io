@@ -8,6 +8,9 @@ html * {
   -moz-osx-font-smoothing: grayscale;
 }
 
+div {
+  overflow-x: hidden;
+}
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
