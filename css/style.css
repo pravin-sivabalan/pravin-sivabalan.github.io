@@ -86,7 +86,6 @@ Page Settings
 }
 
 .about {
-  height: 81vh;
   padding-top: 9%;
   margin-bottom: 10%;
 }
@@ -277,21 +276,6 @@ Zoom Out Intro Effect
   }
 }
 
-.slideanim {visibility:hidden;}
-.slide {
-    /* The name of the animation */
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    /* The duration of the animation */
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    /* Make the element visible */
-
-    visibility: visible;
-
-
-}
-
 /* ---------------------
 
 Slide In Animation
@@ -352,22 +336,30 @@ Mobile Adjustments
 /*Small devices (landscape phones, less than 48em)*/
 @media (max-width: 47.9em) {
 
-  .about h2, .skills h2, .education h2, .experience h2, .contact h2{
-    font-size: 7vw;
-    padding-top: 40px !important;
-
-  }
-
-  .about p {
-    font-size: 5vw;
-  }
-
   nav.navbar {
     min-height:50px;
   }
 
+  .about{
+    height: 100vh;
+  }
+
+  .about h2, .skills h2, .education h2, .experience h2, .contact h2{
+    font-size: 7vw;
+    padding-top: 10vh !important;
+  }
+
+  .about p {
+    font-size: 110%;
+  }
+
   .experience {
     padding: 1%;
+  }
+
+  .experience .row {
+    padding-left:5vw;
+    padding-right:5vw;
   }
 
 }
