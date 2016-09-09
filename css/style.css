@@ -171,139 +171,6 @@ footer {
   text-align: center;
 }
 
-
-/* --------------------------------
-
-Zoom Out Intro Effect
-
--------------------------------- */
-
-.cd-container::after {
-  /* clearfix */
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.cd-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  background: #f35535;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  z-index: 3;
-}
-
-.cd-header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#cd-intro {
-  position: relative;
-  height: 300px;
-  margin-top: 50px;
-  z-index: 1;
-}
-#cd-intro #cd-intro-background {
-  height: 100%;
-  width: 100%;
-  background:
-  linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url(banner-image.jpg);
-  background-size: cover;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-}
-#cd-intro #cd-intro-tagline {
-  position: absolute;
-  width: 90%;
-  max-width: 1170px;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-@media only screen and (min-width: 768px) {
-  #cd-intro {
-    height: 400px;
-    margin-top: 70px;
-  }
-}
-@media only screen and (min-width: 1170px) {
-  #cd-intro {
-    position: fixed;
-    /* do not overlap the header */
-    top: 70px;
-    left: 0;
-    width: 100%;
-    height: 500px;
-    margin-top: 0;
-  }
-}
-
-.cd-content {
-  position: relative;
-  background-color: white;
-  z-index: 2;
-}
-
-.no-cssgradients .cd-content::before {
-  /*display: none;*/
-}
-
-@media only screen and (min-width: 768px) {
-  .cd-content {
-    line-height: 1.8;
-  }
-}
-@media only screen and (min-width: 1170px) {
-  .cd-content {
-    padding: 4em 0;
-    padding-bottom: 0 !important;
-    margin-top: 570px;
-  }
-}
-
-/* ---------------------
-
-Slide In Animation
-
----------------------- */
-
-/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
-@keyframes slide {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(70%);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0%);
-    }
-}
-@-webkit-keyframes slide {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(70%);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0%);
-    }
-}
-
 /* ---------------------
 
 Mobile Adjustments
@@ -360,6 +227,13 @@ Mobile Adjustments
   .experience .row {
     padding-left:5vw;
     padding-right:5vw;
+  }
+
+  .contact {
+    background-color: #f2f2f2;
+    padding: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
 }
