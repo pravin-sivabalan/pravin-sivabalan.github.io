@@ -21,7 +21,7 @@ html * {
   color: #404040;
 }
 
-.about hr, .skills hr, .education hr, .experience hr, .projects hr {
+.about hr, .skills hr, .education hr, .experience hr, .projects hr, .contact hr {
   border: 1px solid #D32F2F;
   width:15%;
 }
@@ -63,6 +63,10 @@ nav.navbar.shrink {
   box-shadow: 0px 0px 51px -2px rgba(0,0,0,0.63);
 }
 
+.active {
+  border-bottom: 1px solid white;
+}
+
 #cd-intro h1 {
   text-align: center;
   font-size: 13vw;
@@ -75,7 +79,7 @@ Page Settings
 
 -------------------------------- */
 
-.about, .skills, .education, .experience, .projects, .contact {
+.about, .skills, .education, .experience, .projects{
   padding: 100px;
   padding-left: 15%;
   padding-right: 15%;
@@ -147,6 +151,13 @@ Page Settings
 
 .contact {
   background-color: #f2f2f2;
+  padding: 100px;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+label {
+  font-weight: bold;
 }
 
 form {

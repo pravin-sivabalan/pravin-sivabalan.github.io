@@ -32,7 +32,7 @@
 	  ga('send', 'pageview');
 	</script>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset-top="200px">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="70">
 
 		<nav class="navbar navbar-light navbar-fixed-top" role:"navigation" id="nav">
 		<button class="navbar-toggler hidden-sm-up" style="padding-bottom: 15px;" type="button" data-toggle="collapse" data-target="#myNavbar">&#9776;</button>
@@ -69,7 +69,6 @@
 		<section class="skills" id="skills">
 		  <h2>What I Can Do</h2>
 			<hr>
-			<div class="slideanim">
 		  <div class="row">
 		    <div class="col-md-3">
 		      <i class="fa fa-code" aria-hidden="true"></i>
@@ -93,7 +92,7 @@
 		    </div>
 		    <div class="col-md-3">
 		      <i class="fa fa-android" aria-hidden="true"></i>
-		      <h4>Android App Creation</h4>
+		      <h4>Android App Development</h4>
 		    </div>
 		  </div>
 		  <div class="row">
@@ -115,7 +114,6 @@
 					<p>SASS</p>
 		    </div>
 		  </div>
-		</div>
 		</section>
 
 		<section class="education" id="education">
@@ -126,7 +124,7 @@
 			    <img class="media-object" src="img/purdue-logo-2.0.jpg" alt="Generic placeholder image">
 			  </a>
 			  <div class="media-body">
-			    <h4 class="media-heading">Purdue University</h4>
+			    <h4 class="media-heading"><strong>Purdue University</strong></h4>
 			    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
 			  </div>
 			</div>
@@ -135,7 +133,7 @@
 			    <img class="media-object" src="img/micds-logo.jpg" alt="Generic placeholder image">
 			  </a>
 			  <div class="media-body">
-			    <h4 class="media-heading">Mary Institute Country Day School</h4>
+			    <h4 class="media-heading"><strong>Mary Institute Country Day School</strong> - High School Degree</h4>
 			    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
 			  </div>
 			</div>
@@ -190,28 +188,23 @@
 
 	<section class="contact " id="contact">
 		<h2>Contact Me</h2>
-		<div class="row">
-    	<a href="http://www.github.com"><i class="fa fa-github" aria-hidden="true" style="display:block; color: black; text-align: center;"></i></a>
-		</div>
-		<form class="slideanim">
-			<div class="row">
-			<div class="col-md-6">
-			<fieldset class="form-group">
-		    <label for="userName">Name</label>
-		    <input type="text" class="form-control" id="userName" placeholder="Enter Name">
-		  </fieldset>
-			<fieldset class="form-group">
-		    <label for="userEmail">Email address</label>
-		    <input type="email" class="form-control" id="email" placeholder="Enter email">
-		  </fieldset>
-		</div>
-		<div class="col-md-6">
-			<fieldset class="form-group">
-		    <label for="exampleTextarea">Message</label>
-		    <textarea class="form-control" id="exampleTextarea" rows="5" placeholder="Enter Message"></textarea>
-		  </fieldset>
-		</div>
-		</div>
+		<hr>
+		<div class="form-group">
+	    <label for="formGroupExampleInput">Full Name:</label>
+	    <input type="text" class="form-control form-control-lg" id="formGroupExampleInput">
+  	</div>
+		<div class="form-group">
+	    <label for="formGroupExampleInput">Company (Optional):</label>
+	    <input type="text" class="form-control form-control-lg" id="formGroupExampleInput">
+  	</div>
+		<div class="form-group">
+	    <label for="formGroupExampleInput">Email Address:</label>
+	    <input type="email" class="form-control form-control-lg">
+  	</div>
+		<div class="form-group">
+    	<label for="exampleTextarea">Message:</label>
+    	<textarea class="form-control" id="exampleTextarea" rows="5"></textarea>
+  	</div>
 		<div class="row" style="text-align:center;">
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</div>
