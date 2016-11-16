@@ -282,8 +282,8 @@ Mobile Adjustments
     min-height:50px;
   }
 
-  .about{
-    height: 100vh;
+  .about p{
+    font-size: 2.2vh !important;
   }
 
   .about h2, .skills h2, .education h2, .experience h2, .contact h2{
@@ -293,6 +293,10 @@ Mobile Adjustments
 
   .about p {
     font-size: 110%;
+  }
+
+  .education, .skills{
+    padding-top: 1%;
   }
 
   .experience {
@@ -309,6 +313,7 @@ Mobile Adjustments
     padding: 100px;
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 1%;
   }
 
 }
