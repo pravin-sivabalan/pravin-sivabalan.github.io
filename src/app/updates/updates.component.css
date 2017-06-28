@@ -1,0 +1,30 @@
+md-card{
+  background: #f4f4f4;
+}
+
+.inner{
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+
+@media (min-width: 768px) {
+  md-card{
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  md-card{
+    margin-right: 130px;
+    margin-left: 130px;
+  }
+}
+
+@media (min-width: 1200px) {
+  md-card{
+    margin-right: 400px;
+    margin-left: 400px;
+  }
+}
