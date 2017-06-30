@@ -1,20 +1,12 @@
 .container{
   display: -webkit-flex;
   display: flex;
-/*
-  -webkit-flex-direction: row;
-  flex-direction: row;*/
 
   -webkit-justify-content: center;
   justify-content:         center;
 
-  -webkit-justify-content: space-between; /* Safari */
+  -webkit-justify-content: space-between;
     justify-content:         space-between;
-}
-
-img{
-  height:40px;
-  width:50px;
 }
 
 a{
@@ -26,7 +18,7 @@ i{
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 30px;
-  color: #a14444;
+  color: #600d00;
 }
 
 @media (min-width: 768px) {
