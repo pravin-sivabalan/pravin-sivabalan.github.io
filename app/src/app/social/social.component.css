@@ -1,4 +1,4 @@
-.container{
+.container {
   display: -webkit-flex;
   display: flex;
 
@@ -9,16 +9,41 @@
     justify-content:         space-between;
 }
 
-a{
+a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-i{
+i {
   font-size: 2rem;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 30px;
   color: #600d00;
+  transition: color 0.5s ease;
+}
+
+.fa-file-text:hover {
+  color: white;
+}
+
+.fa-github:hover {
+  color: black;
+}
+
+.fa-linkedin-square:hover {
+  color: #008ed8;
+}
+
+.fa-spotify:hover{
+  color: #2bc45e;
+}
+
+.fa-soundcloud:hover {
+  color: #ff7700;
+}
+
+.fa-medium:hover {
+  color: #27b377;
 }
 
 @media (min-width: 768px) {
