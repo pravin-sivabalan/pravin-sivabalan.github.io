@@ -6,14 +6,12 @@ import {MdCardModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { ArticlesComponent } from './articles/articles.component';
 import { SocialComponent } from './social/social.component';
 import { UpdatesComponent } from './updates/updates.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArticlesComponent,
     SocialComponent,
     UpdatesComponent
   ],
