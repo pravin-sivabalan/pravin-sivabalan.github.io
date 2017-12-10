@@ -29,3 +29,27 @@ a {
 a:hover {
   opacity: 0.5;
 }
+
+#github:hover {
+  color: black;
+}
+
+#spotify:hover {
+  color: #2bc45e;
+}
+
+#soundcloud:hover {
+  color: #ff7700;
+}
+
+#medium:hover {
+  color: #27b377;
+}
+
+#instagram:hover {
+  color: #8a3ab9;
+}
+
+#linkedin:hover {
+  color: #008ed8;
+}
