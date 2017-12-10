@@ -1,0 +1,31 @@
+body {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul li a {
+  position: relative;color: #231f20;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  color: #231f20;
+  transition: opacity 800ms cubic-bezier(0.19, 1, 0.22, 1) 0ms;
+  will-change: opacity;
+}
+
+::selection {
+  color: #fff;
+  background: #ff4c4e;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #ff4c4e;
+}
+
+a:hover {
+  opacity: 0.5;
+}
