@@ -17,6 +17,13 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-79825204-1');
+
+      var trackOutboundLink = function(url) {
+        ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function(){document.location = url;}
+        });
+      }
     </script>
     <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96x96.png">
@@ -25,22 +32,22 @@
   <body>
       <div>
         <h1>Pravin Sivabalan</h1>
-        <p><a href="https://www.theonion.com/study-63-of-all-human-speech-occurs-under-breath-1819576814"><strong>things i mumble under my breath: </strong>eeeek, wild, fun times, FUN, uuuuuhhhhhhhhh</a></p>
+        <p><a href="https://www.theonion.com/study-63-of-all-human-speech-occurs-under-breath-1819576814" onclick="trackOutboundLink('https://www.theonion.com/study-63-of-all-human-speech-occurs-under-breath-1819576814'); return false;"><strong>things i mumble under my breath: </strong>eeeek, wild, fun times, FUN, uuuuuhhhhhhhhh</a></p>
         <a href="./resume.pdf" target="_blank">Resume</a>
         <br>
-        <a id="linkedin" href="https://www.linkedin.com/in/pravin-sivabalan/" target="_blank">LinkedIn</a>
+        <a id="linkedin" href="https://www.linkedin.com/in/pravin-sivabalan/" onclick="trackOutboundLink('https://www.linkedin.com/in/pravin-sivabalan/'); return false;" target="_blank">LinkedIn</a>
         <br>
-        <a id="github" href="https://github.com/pravin-sivabalan" target="_blank">Github</a>
+        <a id="github" href="https://github.com/pravin-sivabalan" onclick="trackOutboundLink('https://github.com/pravin-sivabalan'); return false;" target="_blank">Github</a>
         <br>
-        <a id="spotify" href="https://open.spotify.com/user/psivabalan" target="_blank">Spotify</a>
+        <a id="spotify" href="https://open.spotify.com/user/psivabalan" onclick="trackOutboundLink('https://open.spotify.com/user/psivabalan'); return false;" target="_blank">Spotify</a>
         <br>
-        <a id="soundcloud" href="https://soundcloud.com/pravin-sivabalan" target="_blank">SoundCloud</a>
+        <a id="soundcloud" href="https://soundcloud.com/pravin-sivabalan" onclick="trackOutboundLink('https://soundcloud.com/pravin-sivabalan'); return false;" target="_blank">SoundCloud</a>
         <br>
-        <a id="instagram" href="https://www.instagram.com/sivaballin/" target="_blank">Instagram</a>
+        <a id="instagram" href="https://www.instagram.com/sivaballin/" onclick="trackOutboundLink('https://www.instagram.com/sivaballin/'); return false;" target="_blank">Instagram</a>
         <br>
-        <a id="medium" href="https://medium.com/@psivabalan" target="_blank">Medium</a>
+        <a id="medium" href="https://medium.com/@psivabalan" onclick="trackOutboundLink('https://medium.com/@psivabalan'); return false;" target="_blank">Medium</a>
         <br>
-        <a id="vsco" href="http://vsco.co/pravinsivabalan" target="_blank">Vsco</a>
+        <a id="vsco" href="http://vsco.co/pravinsivabalan" onclick="trackOutboundLink('http://vsco.co/pravinsivabalan'); return false;" target="_blank">Vsco</a>
       </div>
     </body>
 </html>
