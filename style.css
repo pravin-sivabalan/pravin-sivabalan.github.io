@@ -32,7 +32,7 @@ h1 {
     color: #FFED4A;
     -webkit-animation: pulsate 3s ease-out;
     -webkit-animation-iteration-count: infinite;
-    opacity: 0.5;
+    opacity: 0.2;
 }
 
 @-webkit-keyframes pulsate {
