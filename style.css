@@ -1,19 +1,13 @@
 body {
   font-size: 60px;
+  background-color: #F2622D;
+  color: #FFC501;
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
 }
 
-div {
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-a {
-  display: inline-block;
-  text-decoration: none;
-  position: relative;
-  color: #231f20;
-  transition: opacity 800ms cubic-bezier(0.19, 1, 0.22, 1) 0ms;
-  will-change: opacity;
+h1 {
+  font-size: 1em;
 }
 
 ::selection {
@@ -26,37 +20,42 @@ a {
   background: #ff4c4e;
 }
 
-a:hover {
-  opacity: 0.5;
+.gif {
+  height: 50vh;
 }
 
-#github:hover {
-  color: black;
+.desktop {
+  display: none;
 }
 
-#spotify:hover {
-  color: #2bc45e;
+.pulsate {
+    color: #FFED4A;
+    -webkit-animation: pulsate 3s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.5;
+}
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.5;
+    }
 }
 
-#soundcloud:hover {
-  color: #ff7700;
-}
-
-#medium:hover {
-  color: #27b377;
-}
-
-#instagram:hover {
-  color: #8a3ab9;
-}
-
-#linkedin:hover {
-  color: #008ed8;
-}
 
 @media only screen and (min-width: 1024px) {
-  body {
-    font-size: 35px;
+  .mobile {
+    display: none;
   }
+  .desktop {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
 
 }

@@ -8,6 +8,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79825204-1"></script>
@@ -29,22 +30,19 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
   </head>
   <body>
-      <div>
-        <h1>Pravin Sivabalan</h1>
-        <p><a target="_blank" href="https://www.theonion.com/study-63-of-all-human-speech-occurs-under-breath-1819576814" onclick="trackOutboundLink('https://www.theonion.com/study-63-of-all-human-speech-occurs-under-breath-1819576814'); return false;"><strong>things i mumble under my breath: </strong>eeeek, wild, fun times, FUN, uuuuuhhhhhhhhh</a></p>
-        <a href="./resume.pdf" target="_blank">Resume</a>
-        <br>
-        <a id="linkedin" href="https://www.linkedin.com/in/pravin-sivabalan/" onclick="trackOutboundLink('https://www.linkedin.com/in/pravin-sivabalan/'); return false;" target="_blank">LinkedIn</a>
-        <br>
-        <a id="github" href="https://github.com/pravin-sivabalan" onclick="trackOutboundLink('https://github.com/pravin-sivabalan'); return false;" target="_blank">Github</a>
-        <br>
-        <a id="spotify" href="https://open.spotify.com/user/psivabalan" onclick="trackOutboundLink('https://open.spotify.com/user/psivabalan'); return false;" target="_blank">Spotify</a>
-        <br>
-        <a id="soundcloud" href="https://soundcloud.com/pravin-sivabalan" onclick="trackOutboundLink('https://soundcloud.com/pravin-sivabalan'); return false;" target="_blank">SoundCloud</a>
-        <br>
-        <a id="instagram" href="https://www.instagram.com/sivaballin/" onclick="trackOutboundLink('https://www.instagram.com/sivaballin/'); return false;" target="_blank">Instagram</a>
-        <br>
-        <a id="vsco" href="http://vsco.co/pravinsivabalan" onclick="trackOutboundLink('http://vsco.co/pravinsivabalan'); return false;" target="_blank">Vsco</a>
-      </div>
-    </body>
+    <div>
+      <h1 class="desktop">🎃 👻 H<span class="pulsate">a</span>ppy <span class="pulsate">S</span>poo<span class="pulsate">o</span>op<span class="pulsate">o</span>we<span class="pulsate">e</span>en<span class="pulsate">!!!</span> 👻 🎃</h1>
+      <h1 class="mobile">🎃  H<span class="pulsate">a</span>ppy  👻<span class="pulsate">S</span>poo<span class="pulsate">o</span>op<span class="pulsate">o</span>we<span class="pulsate">e</span>en<span class="pulsate">!!!</span></h1>
+      <div class="gif"><iframe id="iframe" src="https://giphy.com/embed/2vmgb8ZGaeBsuSeo5I" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a id="link" href="https://giphy.com/gifs/2vmgb8ZGaeBsuSeo5I"></a></p>
+    </div>
+  </body>
+  <script type="text/javascript">
+    const gifs = ['https://giphy.com/embed/2vmgb8ZGaeBsuSeo5I', 'https://giphy.com/embed/4HeScCadLcoNQkKdaJ', 'https://giphy.com/embed/3oz8xZCcHcrdIkAmdy'];
+    let count = 0;
+    setInterval(function() {
+      count = count + 1 > 2 ? 0 : count + 1;
+      document.getElementById('iframe').src = gifs[count];
+
+    }, 5000);
+  </script>
 </html>
