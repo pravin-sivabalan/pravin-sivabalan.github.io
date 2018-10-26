@@ -37,12 +37,11 @@
     </div>
   </body>
   <script type="text/javascript">
-    const gifs = ['https://giphy.com/embed/2vmgb8ZGaeBsuSeo5I', 'https://giphy.com/embed/4HeScCadLcoNQkKdaJ', 'https://giphy.com/embed/3oz8xZCcHcrdIkAmdy'];
+    const gifs = ['https://giphy.com/embed/4HeScCadLcoNQkKdaJ','https://giphy.com/embed/2vmgb8ZGaeBsuSeo5I', 'https://giphy.com/embed/3oz8xZCcHcrdIkAmdy'];
     let count = 0;
     setInterval(function() {
       count = count + 1 > 2 ? 0 : count + 1;
       document.getElementById('iframe').src = gifs[count];
-
-    }, 5000);
+    }, 10000);
   </script>
 </html>
