@@ -3,8 +3,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  font-size: 1.2em;
+#textarea {
+ font-size: 1.2em;
   font-family: 'Sen', sans-serif;
 }
 
@@ -20,4 +20,86 @@ li {
 ::-moz-selection {
   color: #fff;
   background: #ff4c4e;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+*:focus {
+  outline: none;
+}
+
+#cursor {
+  font-weight: 100;
+  font-size: 24px;
+  color: #2E3D48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: black;
+  }
+}
+
+@-moz-keyframes blink {
+
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: black;
+  }
+}
+
+@-webkit-keyframes "blink" {
+
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: black;
+  }
+}
+
+@-ms-keyframes "blink" {
+
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: black;
+  }
+}
+
+@-o-keyframes "blink" {
+
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: black;
+  }
 }

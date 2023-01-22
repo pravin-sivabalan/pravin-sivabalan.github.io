@@ -15,11 +15,80 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
   </head>
   <body>
-    <h1>pravin_sivabalan</h1>
-    <ul>
-      <li><b>now:</b> google play store</li>
-      <li><b>before:</b> software engineer @ salesforce, product @ handled, cofounder @ roo</li>
-      <li><a href="https://www.goodreads.com/user/show/54049527-pravin-sivabalan" target="_blank">goodreads</a></li>
-    </ul>
+    <section id="textarea">
+      <h1 id="name">pravin_sivabalan</h1>
+      <ul>
+        <li><b>now:</b> google play store</li>
+        <li><b>before:</b> software engineer @ salesforce, product @ <span id="handled">handled</span>, cofounder @ <span id="roo">roo</span></li>
+        <li>
+          <a class="link" href="https://www.goodreads.com/user/show/54049527-pravin-sivabalan" target="_blank">goodreads</a><span>,</span>
+          <a class="link" href="https://spotify.com" target="_blank">spotify</a>
+        </li>
+        <li><span id="cursor">|</span></li>
+      </ul>
+    </section>
+    <script>
+      function placeCaretAtEnd(el) {
+          el.focus();
+          if (typeof window.getSelection != "undefined"
+            && typeof document.createRange != "undefined") {
+            var range = document.createRange();
+            range.selectNodeContents(el);
+            range.collapse(false);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+          } else if (typeof document.body.createTextRange != "undefined") {
+            var textRange = document.body.createTextRange();
+            textRange.moveToElementText(el);
+            textRange.collapse(false);
+            textRange.select();
+          }
+      }
+
+
+      // const handled = document.getElementById('handled');
+      // const handledColor = 'rgb(228,128,98)'
+      // handled.style.color = handledColor;
+
+      // const roo = document.getElementById('roo');
+      // const rooColor = 'rgb(223,93,57)'
+      // roo.style.color = rooColor;
+
+
+      let isEditMode = false;
+
+      addEventListener('keydown', (event) => { 
+        // turn on edit mode
+        if (event.key === 'i' && !isEditMode) {
+          const cursor = document.getElementById('cursor');
+          const links = document.getElementsByClassName('link');
+          const textarea = document.getElementById('textarea');
+          const name = document.getElementById('name');
+          const blueColor = 'rgb(107,167,227)';
+
+          for (let link of links) {
+            link.style.textDecoration = 'none';
+            link.style.color = blueColor;
+          }
+
+          cursor.style.display = 'none';
+
+          placeCaretAtEnd(textarea);
+          textarea.setAttribute('contenteditable', 'true');
+          textarea.focus();
+          isEditMode = true;
+
+          document.body.style.background = 'black';
+          document.body.style.color = blueColor;
+          name.style.color = 'rgb(203,111,119)';
+          name.innerHTML = '/Users/pravin/sivabalan'
+
+
+          // prevent the i keypress
+          event.preventDefault();
+        }
+      });
+    </script>
   </body>
 </html>
