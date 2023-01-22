@@ -40,10 +40,10 @@ li {
   background: black;
   opacity: 0;
   display: inline-block;
-  animation: blink2 0.5s linear infinite alternate;
+  animation: blink 0.5s linear infinite alternate;
 }
 
-@keyframes blink2 {
+@keyframes blink {
   50% {
     opacity: 0;
   }
