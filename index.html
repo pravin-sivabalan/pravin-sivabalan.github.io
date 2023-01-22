@@ -23,6 +23,7 @@
         <li>
           <a class="link" href="https://www.goodreads.com/user/show/54049527-pravin-sivabalan" target="_blank">goodreads</a><span>,</span>
           <a class="link" href="https://open.spotify.com/user/psivabalan" target="_blank">spotify</a>
+          <span class="todo">// TODO(praline): Add more links</span>
         </li>
         <li><span id="cursor"></span></li>
       </ul>
@@ -61,6 +62,7 @@
       const links = document.getElementsByClassName('link'); 
       const textarea = document.getElementById('textarea');
       const name = document.getElementById('name');
+      const todos = document.getElementsByClassName('todo'); 
 
       addEventListener('keydown', (event) => { 
         // turn on edit mode
@@ -70,6 +72,11 @@
           for (let link of links) {
             link.style.textDecoration = 'none';
             link.style.color = blueColor;
+          }
+
+          for (let todo of todos) {
+            todo.style.visibility = 'inherit';
+            todo.style.color = 'rgb(245,191,135)';
           }
 
           if (cursor) {
@@ -107,13 +114,16 @@
           }
          
           if (cursor) {
-            cursor.style.display = 'block';
+            cursor.style.display = 'flex';
           }
 
-          const links = document.getElementsByClassName('link');
           for (let link of links) {
             link.style.textDecoration = 'underline';
             link.style.color = 'blue';
+          }
+
+          for (let todo of todos) {
+            todo.style.visibility = 'hidden';
           }
 
           event.preventDefault();

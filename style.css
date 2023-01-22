@@ -33,6 +33,10 @@ li {
   outline: none;
 }
 
+.todo {
+  visibility: hidden;
+}
+
 #cursor {
   height: 20px;
   margin-bottom: -4px;
