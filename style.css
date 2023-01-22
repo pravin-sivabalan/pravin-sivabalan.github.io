@@ -4,15 +4,12 @@
 }
 
 body {
-  font-size: 60px;
-  background-color: #F2622D;
-  color: #FFC501;
-  font-family: 'Amatic SC', cursive;
-  text-align: center;
+  font-size: 1.2em;
+  font-family: 'Sen', sans-serif;
 }
 
-h1 {
-  font-size: 2.5em;
+li {
+  line-height: 1.4em;
 }
 
 ::selection {
@@ -23,47 +20,4 @@ h1 {
 ::-moz-selection {
   color: #fff;
   background: #ff4c4e;
-}
-
-.gif {
-  height: 50vh;
-}
-
-.desktop {
-  display: none;
-}
-
-.pulsate {
-    color: #FFED4A;
-    -webkit-animation: pulsate 3s ease-out;
-    -webkit-animation-iteration-count: infinite;
-    opacity: 0.2;
-}
-
-@-webkit-keyframes pulsate {
-    0% {
-        opacity: 0.5;
-    }
-    50% {
-        opacity: 1.0;
-    }
-    100% {
-        opacity: 0.5;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-  h1 {
-    font-size: 1em;
-  }
-  .mobile {
-    display: none;
-  }
-  .desktop {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-
 }
