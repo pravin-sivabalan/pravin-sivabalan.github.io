@@ -56,11 +56,11 @@
       // roo.style.color = rooColor;
 
 
-      let isEditMode = false;
+      let isInputMode = false;
 
       addEventListener('keydown', (event) => { 
         // turn on edit mode
-        if (event.key === 'i' && !isEditMode) {
+        if (event.key === 'i' && !isInputMode) {
           const cursor = document.getElementById('cursor');
           const links = document.getElementsByClassName('link');
           const textarea = document.getElementById('textarea');
@@ -77,7 +77,7 @@
           placeCaretAtEnd(textarea);
           textarea.setAttribute('contenteditable', 'true');
           textarea.focus();
-          isEditMode = true;
+          isInputMode = true;
 
           document.body.style.background = 'black';
           document.body.style.color = blueColor;
@@ -88,6 +88,33 @@
           // prevent the i keypress
           event.preventDefault();
         }
+      });
+
+      document.getElementById('textarea').addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && isInputMode) {
+          const textarea = document.getElementById('textarea');
+          const cursor = document.getElementById('cursor');
+          const name = document.getElementById('name');
+          textarea.setAttribute('contenteditable', 'false');
+
+          document.body.style.background = 'white';
+          document.body.style.color = 'black';
+
+          cursor.style.display = 'block';
+          isInputMode = false;
+
+          const links = document.getElementsByClassName('link');
+          for (let link of links) {
+            link.style.textDecoration = 'underline';
+            link.style.color = 'blue';
+          }
+
+          name.style.color = 'black';
+          name.innerHTML = 'pravin_sivabalan'
+
+          event.preventDefault();
+        }
+
       });
     </script>
   </body>
