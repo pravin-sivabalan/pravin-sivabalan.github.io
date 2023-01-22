@@ -24,7 +24,8 @@
           <a class="link" href="https://www.goodreads.com/user/show/54049527-pravin-sivabalan" target="_blank">goodreads</a><span>,</span>
           <a class="link" href="https://spotify.com" target="_blank">spotify</a>
         </li>
-        <li><span id="cursor">|</span></li>
+        <!-- <li><span id="cursor">|</span></li> -->
+        <li><span id="cursor"></span></li>
       </ul>
     </section>
     <script>
@@ -72,7 +73,14 @@
             link.style.color = blueColor;
           }
 
-          cursor.style.display = 'none';
+          if (cursor) {
+            cursor.style.display = 'none';
+          }
+
+          if (name) {
+            name.style.color = 'rgb(203,111,119)';
+            name.innerHTML = '/Users/pravin/sivabalan'
+          }
 
           placeCaretAtEnd(textarea);
           textarea.setAttribute('contenteditable', 'true');
@@ -81,8 +89,6 @@
           isInputMode = true;
           document.body.style.background = 'black';
           document.body.style.color = blueColor;
-          name.style.color = 'rgb(203,111,119)';
-          name.innerHTML = '/Users/pravin/sivabalan'
 
           // prevent the i keypress
           event.preventDefault();
