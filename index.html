@@ -8,128 +8,26 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <script src="./links.js" defer></script>
   </head>
   <body>
     <section id="textarea">
-      <h1 id="name">pravin_sivabalan</h1>
-      <ul>
-        <li><b>now:</b> google play store</li>
-        <li><b>before:</b> software engineer @ salesforce, product @ <span id="handled">handled</span>, cofounder @ <span id="roo">roo</span></li>
-        <li>
-          <a class="link" href="https://www.goodreads.com/user/show/54049527-pravin-sivabalan" target="_blank">goodreads</a><span>,</span>
-          <a class="link" href="https://open.spotify.com/user/psivabalan" target="_blank">spotify</a>
-          <span class="todo">// TODO(praline): Add more links</span>
-        </li>
-        <li><span id="cursor"></span></li>
-      </ul>
+      <h1 id="name">Pravin</h1>
+      
+      <div class="section">
+        <ul>
+          <li><b>now:</b> google play store</li>
+          <li><b>before:</b> software engineer @ salesforce, product @ handled, cofounder @ roo</li>
+          <li><b>links:</b> <span id="links-container"></span></li>
+          <li><b>configs:</b> <span id="configs-container"></span></li>
+        </ul>
+      </div>
     </section>
-    <script>
-      function placeCaretAtEnd(el) {
-          el.focus();
-          if (typeof window.getSelection != "undefined"
-            && typeof document.createRange != "undefined") {
-            var range = document.createRange();
-            range.selectNodeContents(el);
-            range.collapse(false);
-            var sel = window.getSelection();
-            sel.removeAllRanges();
-            sel.addRange(range);
-          } else if (typeof document.body.createTextRange != "undefined") {
-            var textRange = document.body.createTextRange();
-            textRange.moveToElementText(el);
-            textRange.collapse(false);
-            textRange.select();
-          }
-      }
-
-
-      // const handled = document.getElementById('handled');
-      // const handledColor = 'rgb(228,128,98)'
-      // handled.style.color = handledColor;
-
-      // const roo = document.getElementById('roo');
-      // const rooColor = 'rgb(223,93,57)'
-      // roo.style.color = rooColor;
-
-
-      let isInputMode = false;
-      const cursor = document.getElementById('cursor');
-      const links = document.getElementsByClassName('link'); 
-      const textarea = document.getElementById('textarea');
-      const name = document.getElementById('name');
-      const todos = document.getElementsByClassName('todo'); 
-
-      addEventListener('keydown', (event) => { 
-        // turn on edit mode
-        if (event.key === 'i' && !isInputMode) {
-          const blueColor = 'rgb(107,167,227)';
-
-          for (let link of links) {
-            link.style.textDecoration = 'none';
-            link.style.color = blueColor;
-          }
-
-          for (let todo of todos) {
-            todo.style.visibility = 'inherit';
-            todo.style.color = 'rgb(245,191,135)';
-          }
-
-          if (cursor) {
-            cursor.style.display = 'none';
-          }
-
-          if (name) {
-            name.style.color = 'rgb(203,111,119)';
-            name.innerHTML = '/Users/pravin/sivabalan'
-          }
-
-          placeCaretAtEnd(textarea);
-          textarea.setAttribute('contenteditable', 'true');
-          textarea.focus();
-
-          isInputMode = true;
-          document.body.style.background = 'black';
-          document.body.style.color = blueColor;
-
-          // prevent the i keypress
-          event.preventDefault();
-        }
-      });
-
-      textarea.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && isInputMode) {
-          textarea.setAttribute('contenteditable', 'false');
-          document.body.style.background = 'white';
-          document.body.style.color = 'black';
-          isInputMode = false;
-
-          if (name) {
-            name.style.color = 'black';
-            name.innerHTML = 'pravin_sivabalan'
-          }
-         
-          if (cursor) {
-            cursor.style.display = 'flex';
-          }
-
-          for (let link of links) {
-            link.style.textDecoration = 'underline';
-            link.style.color = 'blue';
-          }
-
-          for (let todo of todos) {
-            todo.style.visibility = 'hidden';
-          }
-
-          event.preventDefault();
-        }
-
-      });
-    </script>
   </body>
 </html>
