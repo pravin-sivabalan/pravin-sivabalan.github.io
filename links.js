@@ -44,7 +44,7 @@ async function fetchLinksData() {
     // Fallback data in case the fetch fails
     const fallbackLinks = [
       { name: "github", url: "https://github.com/pravin-sivabalan" },
-      { name: "linkedin", url: "https://www.linkedin.com/in/pravinsivabalan/" },
+      { name: "linkedin", url: "https://linkedin.com/in/pravin-sivabalan" },
       { name: "goodreads", url: "https://www.goodreads.com/user/show/54049527-pravin-sivabalan" },
       { name: "spotify", url: "https://open.spotify.com/user/psivabalan" }
     ];
