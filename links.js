@@ -50,7 +50,7 @@ async function fetchLinksData() {
     ];
     
     const fallbackConfigs = [
-      { name: "karabiner", url: "https://github.com/pravin-sivabalan/karabiner.json" }
+      { name: "karabiner", url: "https://pravin-sivabalan.github.io/karabiner.json" }
     ];
     
     generateLinks(fallbackLinks, 'links-container');
